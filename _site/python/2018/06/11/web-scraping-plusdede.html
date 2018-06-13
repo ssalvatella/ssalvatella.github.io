@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Non social metatags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#157878">
+
+    
+
+    <title>Un poco de web scraping en plusdede.com :mag_right:</title>
+
+    
+      <!-- Update your html tag to include the itemscope and itemtype attributes. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Place this data between the <head> tags of your website -->
+
+<meta name="description" content="Hoy en día es bastante conocida la plataforma plusdede.com en la que se pueden ver cientos de series y películas. Aunque reconozco ser bastante novat...">
+
+
+
+
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Un poco de web scraping en plusdede.com :mag_right:">
+<meta itemprop="description" content="Hoy en día es bastante conocida la plataforma plusdede.com en la que se pueden ver cientos de series y películas. Aunque reconozco ser bastante novat...">
+
+  <meta itemprop="image" content="http://localhost:4000">
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+
+
+
+<meta name="twitter:title" content="Un poco de web scraping en plusdede.com :mag_right:">
+<meta name="twitter:description" content="Hoy en día es bastante conocida la plataforma plusdede.com en la que se pueden ver cientos de series y películas. Aunque reconozco ser bastante novat...">
+
+
+
+<!-- Twitter summary card with large image must be at least 280x150px -->
+
+  <meta name="twitter:image:src" content="http://localhost:4000">
+  <meta property="twitter:image" content="http://localhost:4000">
+
+<meta property="twitter:url" content="http://localhost:4000/python/2018/06/11/web-scraping-plusdede.html">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Un poco de web scraping en plusdede.com :mag_right:">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:4000/python/2018/06/11/web-scraping-plusdede.html">
+
+  <meta property="og:image" content="http://localhost:4000">
+
+<meta property="og:description" content="Hoy en día es bastante conocida la plataforma plusdede.com en la que se pueden ver cientos de series y películas. Aunque reconozco ser bastante novat...">
+<meta property="og:site_name" content="Samuel Salvatella">
+
+  <meta property="article:published_time" content="2018-06-11T14:02:41+02:00">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <meta property="article:tag" content="python">
+  
+
+
+
+
+    
+
+    <link rel="canonical" href="http://localhost:4000/python/2018/06/11/web-scraping-plusdede.html">
+
+    
+
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    <meta name="robots" content="noarchive">
+
+    <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="">
+    <link rel="alternate" media="handheld" href=""> -->
+
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d2a69ca3b16839cb57a8dcb316834972387b532d">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+  </head>
+<body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+
+    
+      <a class="site-title" href="/">Samuel Salvatella</a>
+    
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+              
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="/about/">About</a>
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="/contact.html">Contact</a>
+              
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    
+    
+    
+
+    <section class="page-header">
+      <h1 class="project-name">Un poco de web scraping en plusdede.com <img class="emoji" title=":mag_right:" alt=":mag_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f50e.png" height="20" width="20">
+</h1>
+      <h2 class="project-tagline"></h2>
+      
+      <!-- Post tagline -->
+      
+        <h2 class="project-date">
+        <time datetime="2018-06-11T14:02:41+02:00" itemprop="datePublished">
+          
+          Jun 11, 2018
+        </time>
+        
+        
+        </h2>
+      
+      <!-- End: Post tagline -->
+    </section>
+
+    <section class="main-content">
+
+      <article itemscope itemtype="http://schema.org/BlogPosting">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Un poco de web scraping en plusdede.com :mag_right:</h1>
+    <p class="post-meta">
+      <time datetime="2018-06-11T14:02:41+02:00" itemprop="datePublished">
+        
+        Jun 11, 2018
+      </time>
+      </p>
+  </header> -->
+
+  <div itemprop="articleBody">
+    <p>Hoy en día es bastante conocida la plataforma <a href="https://www.plusdede.com/">plusdede.com</a> en la que se pueden ver cientos de series y películas. Aunque reconozco ser bastante novato
+en la técnica de <a href="https://es.wikipedia.org/wiki/Web_scraping"><em>web scraping</em></a>, en este post comentaré un ejemplo que he realizado en <code class="highlighter-rouge">Python</code> sobre esta web.</p>
+
+<p>Es un ejemplo bastante sencillo pero permite tener una idea básica sobre esta técnica.</p>
+
+<p>Lo que queremos conseguir al terminar este post es:</p>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">    Identificarnos dentro de la web con un usuario y contraseña.</p>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">    Mostrar los capítulos que tenemos pendientes de ver por consola.</p>
+
+<hr>
+
+<h2 id="identificarnos-en-la-web">Identificarnos en la web</h2>
+
+<p>Para empezar, necesitaremos tener <strong>ChromeDriver</strong> en nuestro ordenador. Nos permite hacer uso del motor del navegador Chrome desde Python.
+Podemos descargarlo desde <a href="http://chromedriver.chromium.org/downloads">aquí</a>.</p>
+
+<p>Una vez descargado, dejamos el ejecutable en el directorio donde vayamos a trabajar.</p>
+
+<p>Para empezar a programar necesitamos tener instalado el paquete <code class="highlighter-rouge">selenium</code> en Python. Lo instalamos rápidamente con el comando <code class="highlighter-rouge">pip install selenium</code>.</p>
+
+<p>Probamos que el paquete esta instalado correctamente con el siguiente código:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="c"># Arrancamos el navegador</span>
+<span class="n">navegador</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="s">"chromedriver"</span><span class="p">)</span> 
+<span class="c"># Cerramos el navegador</span>
+<span class="n">navegador</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span></code></pre></figure>
+
+<blockquote>
+  <p>El parámetro <code class="highlighter-rouge">"chromedriver"</code> es la ruta al ChromeDriver descargado. En caso de tenerlo en una carpeta distinta a la del script indicar su ruta.</p>
+</blockquote>
+
+<p>Si ejecutamos este código, veremos cómo se abre el navegador Chrome para después cerrarse. ¡Estamos controlando el navegador desde nuestro script de Python! Es un buen comienzo…</p>
+
+<p>De todas formas, no necesitamos estar constantemente abriendo el navegador para ejecutar nuestro script. Desactivamos la apertura del Chrome de la siguiente manera:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
+
+<span class="n">opciones</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
+<span class="c"># Desactivamos la apertura del navegador</span>
+<span class="n">opciones</span><span class="o">.</span><span class="n">set_headless</span><span class="p">(</span><span class="n">headless</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># Indicamos que no queremos estar viendo todos los mensajes del navegador</span>
+<span class="n">opciones</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">"log-level=3"</span><span class="p">)</span> 
+
+<span class="c"># Arrancamos el navegador</span>
+<span class="n">navegador</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="s">"chromedriver"</span><span class="p">,</span> <span class="n">chrome_options</span><span class="o">=</span><span class="n">opciones</span><span class="p">)</span> 
+<span class="c"># Cerramos el navegador</span>
+<span class="n">navegador</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span></code></pre></figure>
+
+<p>Ahora, cuando ejecutemos el script, ya no nos aparecerá el navegador.</p>
+
+<p>Lo siguiente será hacer nuestra primera función que se encargará de identificarse dentro de la web.</p>
+
+<p>Si vamos a la página de identificación de <a href="https://www.plusdede.com/login"><code class="highlighter-rouge">plusdede.com/login</code></a> veremos una página como la siguiente:</p>
+
+<p><img src="/assets/img/plusdede_login.png" alt="Página de login de plusdede.com" title="plusdede.com/login"></p>
+
+<p>Lo primero que llama nuestra atención es la presencia del <em>captcha</em> que hay que completar para poder entrar. Tendrá que haber una forma de mostrar al usuario el <em>captcha</em>
+para que este lo complete y poder identificarse correctamente.</p>
+
+<p>En este momento la herramienta de <code class="highlighter-rouge">inspeccionar elemento</code> de nuestro Firefox o Chrome se vuelve nuestra mejor amiga.
+Si hacemos click derecho en la imagen del <em>captcha</em> y le damos a inspeccionar elemento podremos ver en el panel derecho que se abre de qué tipo de elemento es.</p>
+
+<p><img src="/assets/img/plusdede_inspeccionar_elemento.png" alt="Inspeccionando elemento" title="Inspeccionando captcha"></p>
+
+<p>Vemos por lo tanto que se trata de una imagen con su etiqueta <code class="highlighter-rouge">&lt;img&gt;</code>.</p>
+
+<p>Empezamos nuestra función <code class="highlighter-rouge">login()</code> de la siguiente forma:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">usuario</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="c"># Le decimos al navegador que pida la página para identificarse</span>
+    <span class="n">navegador</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"https://www.plusdede.com/login"</span><span class="p">)</span>
+    <span class="c"># Obtenemos el elemento web &lt;img&gt; de la página</span>
+    <span class="n">captcha</span> <span class="o">=</span> <span class="n">navegador</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s">"img"</span><span class="p">)</span></code></pre></figure>
+
+<p>Para poder mostrarle al usuario del script la imagen del <em>captcha</em> deberemos de hacer una función auxiliar que tome una instantánea de ese recuadro de la página y la abra con cualquier visor de imágenes.</p>
+
+<p>Necesitaremos para crear la imagen el paquete <code class="highlighter-rouge">pillow</code>.</p>
+
+<p>Lo instalamos rápidamente con el comando <code class="highlighter-rouge">pip install pillow</code>.</p>
+
+<p>Añadimos en la cabecera del script la importación del nuevo paquete mediante <code class="highlighter-rouge">from PIL import Image</code></p>
+
+<p>De esta forma, nuestra función auxiliar quedaría de la siguiente manera:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">guardar_captcha</span><span class="p">(</span><span class="n">elemento</span><span class="p">,</span> <span class="n">ruta</span><span class="p">):</span>
+
+    <span class="c"># Obtenemos la posición y la medida del elemento</span>
+    <span class="n">posicion</span> <span class="o">=</span> <span class="n">elemento</span><span class="o">.</span><span class="n">location</span>
+    <span class="n">medida</span> <span class="o">=</span> <span class="n">elemento</span><span class="o">.</span><span class="n">size</span>
+
+    <span class="c"># Guardamos una imagen de la página en la ruta indicada</span>
+    <span class="n">navegador</span><span class="o">.</span><span class="n">save_screenshot</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>
+
+    <span class="c"># Utilizamos la librería para abrir la imagen en memoria</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>
+
+    <span class="c"># Obtenemos las coordenadas a recortar de la imagen</span>
+    <span class="n">izquierda</span> <span class="o">=</span> <span class="n">posicion</span><span class="p">[</span><span class="s">'x'</span><span class="p">]</span>
+    <span class="n">arriba</span> <span class="o">=</span> <span class="n">posicion</span><span class="p">[</span><span class="s">'y'</span><span class="p">]</span>
+    <span class="n">derecha</span> <span class="o">=</span> <span class="n">posicion</span><span class="p">[</span><span class="s">'x'</span><span class="p">]</span> <span class="o">+</span> <span class="n">medida</span><span class="p">[</span><span class="s">'width'</span><span class="p">]</span>
+    <span class="n">abajo</span> <span class="o">=</span> <span class="n">posicion</span><span class="p">[</span><span class="s">'y'</span><span class="p">]</span> <span class="o">+</span> <span class="n">medida</span><span class="p">[</span><span class="s">'height'</span><span class="p">]</span>
+
+    <span class="c"># Recortamos la imagen para dejar solo el captcha</span>
+    <span class="n">imagen</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">crop</span><span class="p">((</span><span class="n">izquierda</span><span class="p">,</span> <span class="n">arriba</span><span class="p">,</span> <span class="n">derecha</span><span class="p">,</span> <span class="n">abajo</span><span class="p">))</span>
+    <span class="c"># Guardamos la imagen después de recortarla</span>
+    <span class="n">imagen</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span> <span class="s">'png'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span></code></pre></figure>
+
+<p>Con esto, ya tenemos una función que nos guarda la imagen del <em>captcha</em> en un archivo <code class="highlighter-rouge">.png</code>.</p>
+
+<p>Ahora volviendo a nuestra función de <code class="highlighter-rouge">login()</code>:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">usuario</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="c"># Le decimos al navegador que pida la página para identificarse</span>
+    <span class="n">navegador</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"https://www.plusdede.com/login"</span><span class="p">)</span>
+    <span class="c"># Obtenemos el elemento web &lt;img&gt; de la página</span>
+    <span class="n">captcha</span> <span class="o">=</span> <span class="n">navegador</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s">"img"</span><span class="p">)</span>
+    <span class="c"># Guarda el captcha en un archivo</span>
+    <span class="n">guardar_captcha</span><span class="p">(</span><span class="n">captcha</span><span class="p">,</span> <span class="s">"captcha.png"</span><span class="p">)</span>
+    <span class="c"># Mostramos la imagen en el visor por defecto</span>
+    <span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"captcha.png"</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="c"># Le pedidos al usuario que escriba el captcha que le aparece</span>
+    <span class="n">texto_captcha</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Introduce los números de la imagen: "</span><span class="p">)</span></code></pre></figure>
+
+<p>Una vez que podemos hacer que el usuario complete el <em>captcha</em>, habrá que rellenar los campos con los datos que tenemos.</p>
+
+<p>Para ello, utilizando de nuevo la herramienta <code class="highlighter-rouge">inspeccionar elemento</code> del navegador, vemos los identificadores (<code class="highlighter-rouge">id</code>) de los campos.</p>
+
+<p>En la función <code class="highlighter-rouge">login()</code> de nuevo, le diremos al navegador que escriba los datos en los campos con esos identificadores.</p>
+
+<p>Después, se hará click en el botón para entrar. Habrá que decirle al navegador que espere hasta que aparezca un elemento que nos diga
+que el login se ha realizado correctamente.</p>
+
+<p>Para realizar esa espera habrá que añadir a nuestras importaciones al inicio del script:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">TimeoutException</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span></code></pre></figure>
+
+<p>Y luego en la función <code class="highlighter-rouge">login()</code>:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">usuario</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Entrando en Plusdede.com para realizar login..."</span><span class="p">)</span>
+    <span class="n">navegador</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span> <span class="o">+</span> <span class="s">"/login"</span><span class="p">)</span>
+    <span class="n">captcha</span> <span class="o">=</span> <span class="n">navegador</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s">"img"</span><span class="p">)</span>
+    <span class="n">guardar_captcha</span><span class="p">(</span><span class="n">captcha</span><span class="p">,</span> <span class="s">"captcha.png"</span><span class="p">)</span> <span class="c"># guarda el captcha en un fichero</span>
+    <span class="c"># Mostramos la imagen en el visor por defecto</span>
+    <span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"captcha.png"</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="c"># Le pedidos al usuario que escriba el captcha que le aparece</span>
+    <span class="n">texto_captcha</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Introduce los números de la imagen: "</span><span class="p">)</span>
+    <span class="c"># Introducimos en el campo el captcha</span>
+    <span class="n">campo_captcha</span> <span class="o">=</span> <span class="n">navegador</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">"input-captcha"</span><span class="p">)</span>
+    <span class="n">campo_captcha</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">campo_captcha</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">texto_captcha</span><span class="p">)</span>
+
+    <span class="c"># Se escribe el usuario y la contraseña en el resto de campos de la misma forma</span>
+    <span class="n">campo_usuario</span> <span class="o">=</span> <span class="n">navegador</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">"input-email"</span><span class="p">)</span>
+    <span class="n">campo_usuario</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">campo_usuario</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">usuario</span><span class="p">)</span>
+    <span class="n">campo_password</span> <span class="o">=</span> <span class="n">navegador</span><span class="o">.</span><span class="n">find_element_by_name</span><span class="p">(</span><span class="s">"password"</span><span class="p">)</span>
+    <span class="n">campo_password</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">campo_password</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+
+    <span class="c"># Obtenemos el botón para enviar el formulario</span>
+    <span class="n">boton_entrar</span> <span class="o">=</span> <span class="n">navegador</span><span class="o">.</span><span class="n">find_element_by_css_selector</span><span class="p">(</span><span class="s">"button"</span><span class="p">)</span>
+    <span class="n">boton_entrar</span><span class="o">.</span><span class="n">click</span><span class="p">()</span> <span class="c"># Hacemos click en él</span>
+
+    <span class="c"># Esperamos un máximo de 3 segundos a que aparezca el elemento 'username' en la página</span>
+    <span class="k">try</span><span class="p">:</span> 
+        <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">navegador</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+            <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s">'username'</span><span class="p">))</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span></code></pre></figure>
+
+<p>En caso de que la identificación se haya realizado correctamente, la función devolverá <code class="highlighter-rouge">True</code> y en caso contrario <code class="highlighter-rouge">False</code>.</p>
+
+<p>Podemos probar que todo funciona correctamente con nuestros datos de usuario:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">login</span><span class="p">(</span><span class="s">"mi_usuario"</span><span class="p">,</span> <span class="s">"mi_password"</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Logeado correctamente!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Error en el login."</span><span class="p">)</span>
+
+<span class="n">navegador</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span> <span class="c"># Cerramos el navegador</span></code></pre></figure>
+
+<h2 id="leer-nuestros-capítulos-pendientes">Leer nuestros capítulos pendientes</h2>
+
+<p>Vamos a profundizar un pelín más en las posibilidades que nos ofrece el <em>web scraping</em>.</p>
+
+<p>Lo siguiente es que nuestro script en <code class="highlighter-rouge">Python</code> lea que capítulos tenemos pendientes de ver y nos los muestre por consola.</p>
+
+<p>Una tarea así requiere una herramienta versátil para <strong>parsear</strong> la página <code class="highlighter-rouge">html</code>.</p>
+
+<p>La herramienta perfecta para esto es <code class="highlighter-rouge">BeautifulSoup</code>.</p>
+
+<p>Como siempre la instalamos fácilmente mediante <code class="highlighter-rouge">pip install beautifulsoup4</code></p>
+
+<p>Y la añadimos a las importaciones del inicio del script <code class="highlighter-rouge">from bs4 import BeautifulSoup</code>.</p>
+
+<p>Una vez más, utilizaremos <code class="highlighter-rouge">inspeccionar elemento</code> para entender como organiza la página los capítulos en el código <code class="highlighter-rouge">html</code>.</p>
+
+<p><img src="/assets/img/plusdede-inicio-inspeccionar.png" alt="Inspeccionando elemento" title="Inspeccionando capítulos pendientes"></p>
+
+<p>Definiremos un nuevo método que se encargue de leer los capítulos de la página de inicio en función de los elementos que hemos visto que 
+se encargan de mostrar los capítulos.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">mostrar_capitulos_pendientes</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Tienes pendientes los siguientes capítulos: "</span><span class="p">)</span>
+    <span class="c"># Utilizamos BeautifulSoup para parsear el código de la página del navegador</span>
+    <span class="n">pagina</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">navegador</span><span class="o">.</span><span class="n">page_source</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+    <span class="c"># Obtenemos todos los elementos que contengan capítulos</span>
+    <span class="n">capitulos</span> <span class="o">=</span> <span class="n">pagina</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">"div"</span><span class="p">,</span> <span class="p">{</span><span class="s">"class"</span><span class="p">:</span> <span class="s">"media-container"</span><span class="p">})</span>
+    <span class="c"># Recorremos cada capitulo</span>
+    <span class="k">for</span> <span class="n">capitulo</span> <span class="ow">in</span> <span class="n">capitulos</span><span class="p">:</span>
+        <span class="c"># Obtenemos el nombre del capítulo</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="n">capitulo</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">"div"</span><span class="p">,</span> <span class="p">{</span><span class="s">"class"</span><span class="p">:</span> <span class="s">"media-title"</span><span class="p">})</span><span class="o">.</span><span class="n">getText</span><span class="p">()</span>
+        <span class="c"># Obtenemos el enlace a la serie</span>
+        <span class="n">enlace</span> <span class="o">=</span> <span class="n">capitulo</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">"a"</span><span class="p">,</span> <span class="p">{</span><span class="s">"data-container"</span><span class="p">:</span> <span class="s">"body"</span><span class="p">})[</span><span class="s">'href'</span><span class="p">]</span>
+        <span class="c"># Imprimimos por pantalla cada capítulo pendiente de ver</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"-&gt; "</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">enlace</span><span class="p">)</span></code></pre></figure>
+
+<blockquote>
+  <p>En el método <code class="highlighter-rouge">find()</code> o <code class="highlighter-rouge">findAll()</code>, el primer parámetro indica el tipo de elemento (<code class="highlighter-rouge">&lt;div&gt;</code>, <code class="highlighter-rouge">&lt;a&gt;</code>, etc..).
+El segundo parámetro añade más campos a buscar como la <code class="highlighter-rouge">class</code> o cualquier atributo <code class="highlighter-rouge">html</code> que deseemos buscar.
+De esta manera, obtenemos los elementos específicos que hemos visto analizando la página.</p>
+</blockquote>
+
+<p>Volvemos a probar el funcionamiento:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">login</span><span class="p">(</span><span class="s">"mi_usuario"</span><span class="p">,</span> <span class="s">"mi_password"</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Logeado correctamente!"</span><span class="p">)</span>
+    <span class="n">mostrar_capitulos_pendientes</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Error en el login."</span><span class="p">)</span>
+
+<span class="n">navegador</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span> <span class="c"># Cerramos el navegador</span></code></pre></figure>
+
+<p>Y esto nos devuelve:</p>
+
+<p><img src="/assets/img/scraping_resultado.png" alt="Resultado final" title="Resultado final"></p>
+
+<h2 id="conclusiones">Conclusiones</h2>
+
+<p>Hemos completado un ejemplo muy sencillo de <em>web scraping</em>.</p>
+
+<p>Lo importante es <strong>entender</strong> en que consiste esta <strong>técnica</strong> y el <strong>potencial</strong> que tiene al aportar soluciones para <strong>automatizar procesos</strong>
+en los cuales por alguna razón <strong>no tenemos acceso a una API abierta</strong>.</p>
+
+<p>Si quieres acceder al código completo del script puedes hacerlo <a href="https://gist.github.com/ssalvatella/6acaf5d6f61a29c49d305030f80b67e5">aquí</a>.</p>
+
+<blockquote>
+  <p>¿Quizás podríamos intentar en el futuro descargar automáticamente los capítulos que tenemos pendientes?</p>
+</blockquote>
+
+  </div>
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        <!-- SVG icons from https://iconmonstr.com -->
+
+        <!-- Github icon -->
+        <span class="my-span-icon">
+          <a href="http://github.com/ssalvatella" aria-label="ssalvatella's GitHub" title="ssalvatella's GitHub">
+            <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+          </a>
+        </span>
+
+        <!-- RSS icon -->
+        
+        <!-- Contact icon -->
+        
+        
+          <span class="my-span-icon">
+            <a href="/about/" aria-label="Contact" title="Contact ssalvatella">
+              <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"></path></svg>
+            </a>
+          </span>
+        
+
+      </footer>
+    </section>
+
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-77509988-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>

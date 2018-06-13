@@ -8,10 +8,12 @@
 layout: home
 ---
 
-Cayman Blog Theme is a clean, responsive blogging theme for Jekyll, with social features. It is inspired by the Cayman Theme for Github Pages, which can be greatly used for single projects but not as blogging platform.
+:pencil: Mi nombre es <strong>Samuel</strong>. Tengo 22 años y estoy graduado en Ingeniería Informática. 
 
-This theme has instead all you need to start today blogging with Jekyll, and no effort: pages, posts, few social buttons. Try loading this on mobile too.
+Trabajo con una variedad de **lenguajes** y ***frameworks***, tanto en *back-end* como en *front-end*. 
 
-Have a look at the Github page for more information.
+ :point_right: `Java`, `C`, `C++`, `Python`, `PHP`, `JS` o incluso `COBOL` son algunos de los lenguajes que he utilizado.
 
-You find this descriptive text in the `index.md` file, so you can change it, or remove it completely, according to your needs.
+:point_right: Entre los *frameworks* están [CodeIgniter](https://codeigniter.com/), [Laravel](https://laravel.com/) , [Bootstrap](https://getbootstrap.com/) o [JavaFX](https://wiki.openjdk.java.net/display/OpenJFX/Main)
+
+:point_right: Las bases de datos con las que he trabajado son: `MySQL`, `MS SQL`, `PostgreSQL` o `MongoDB`.

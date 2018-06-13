@@ -253,6 +253,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-seo-tag (~> 2.1)
   jekyll-theme-cayman-blog
+  jemoji
   minima (~> 2.0)
   tzinfo-data
   wdm (~> 0.1.0)

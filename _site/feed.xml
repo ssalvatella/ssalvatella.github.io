@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-13T02:47:03+02:00</updated><id>http://localhost:4000/</id><title type="html">Samuel Salvatella</title><subtitle>Hola, soy Ingeniero Informático. Hago código y aquí escribo sobre ello.</subtitle><entry><title type="html">Un poco de web scraping en plusdede.com :mag_right:</title><link href="http://localhost:4000/python/2018/06/11/web-scraping-plusdede.html" rel="alternate" type="text/html" title="Un poco de web scraping en plusdede.com :mag_right:" /><published>2018-06-11T14:02:41+02:00</published><updated>2018-06-11T14:02:41+02:00</updated><id>http://localhost:4000/python/2018/06/11/web-scraping-plusdede</id><content type="html" xml:base="http://localhost:4000/python/2018/06/11/web-scraping-plusdede.html">&lt;p&gt;Hoy en día es bastante conocida la plataforma &lt;a href=&quot;https://www.plusdede.com/&quot;&gt;plusdede.com&lt;/a&gt; en la que se pueden ver cientos de series y películas. Aunque reconozco ser bastante novato
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-13T03:01:00+02:00</updated><id>http://localhost:4000/</id><title type="html">Samuel Salvatella</title><subtitle>Hola, soy Ingeniero Informático. Hago código y aquí escribo sobre ello.</subtitle><entry><title type="html">Un poco de web scraping en plusdede.com :mag_right:</title><link href="http://localhost:4000/python/2018/06/11/web-scraping-plusdede.html" rel="alternate" type="text/html" title="Un poco de web scraping en plusdede.com :mag_right:" /><published>2018-06-11T14:02:41+02:00</published><updated>2018-06-11T14:02:41+02:00</updated><id>http://localhost:4000/python/2018/06/11/web-scraping-plusdede</id><content type="html" xml:base="http://localhost:4000/python/2018/06/11/web-scraping-plusdede.html">&lt;p&gt;Hoy en día es bastante conocida la plataforma &lt;a href=&quot;https://www.plusdede.com/&quot;&gt;plusdede.com&lt;/a&gt; en la que se pueden ver cientos de series y películas. Aunque reconozco ser bastante novato
 en la técnica de &lt;a href=&quot;https://es.wikipedia.org/wiki/Web_scraping&quot;&gt;&lt;em&gt;web scraping&lt;/em&gt;&lt;/a&gt;, en este post comentaré un ejemplo que he realizado en &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt; sobre esta web.&lt;/p&gt;
 
 &lt;p&gt;Es un ejemplo bastante sencillo pero permite tener una idea básica sobre esta técnica.&lt;/p&gt;
@@ -57,7 +57,7 @@ Podemos descargarlo desde &lt;a href=&quot;http://chromedriver.chromium.org/down
 
 &lt;p&gt;Si vamos a la página de identificación de &lt;a href=&quot;https://www.plusdede.com/login&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;plusdede.com/login&lt;/code&gt;&lt;/a&gt; veremos una página como la siguiente:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/plusdede_login.png&quot; alt=&quot;Página de login de plusdede.com&quot; title=&quot;plusdede.com/login&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/plusdede_login.PNG&quot; alt=&quot;Página de login de plusdede.com&quot; title=&quot;plusdede.com/login&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Lo primero que llama nuestra atención es la presencia del &lt;em&gt;captcha&lt;/em&gt; que hay que completar para poder entrar. Tendrá que haber una forma de mostrar al usuario el &lt;em&gt;captcha&lt;/em&gt;
 para que este lo complete y poder identificarse correctamente.&lt;/p&gt;
@@ -65,7 +65,7 @@ para que este lo complete y poder identificarse correctamente.&lt;/p&gt;
 &lt;p&gt;En este momento la herramienta de &lt;code class=&quot;highlighter-rouge&quot;&gt;inspeccionar elemento&lt;/code&gt; de nuestro Firefox o Chrome se vuelve nuestra mejor amiga.
 Si hacemos click derecho en la imagen del &lt;em&gt;captcha&lt;/em&gt; y le damos a inspeccionar elemento podremos ver en el panel derecho que se abre de qué tipo de elemento es.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/plusdede_inspeccionar_elemento.png&quot; alt=&quot;Inspeccionando elemento&quot; title=&quot;Inspeccionando captcha&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/plusdede_inspeccionar_elemento.PNG&quot; alt=&quot;Inspeccionando elemento&quot; title=&quot;Inspeccionando captcha&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vemos por lo tanto que se trata de una imagen con su etiqueta &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 
@@ -208,7 +208,7 @@ que el login se ha realizado correctamente.&lt;/p&gt;
 
 &lt;p&gt;Una vez más, utilizaremos &lt;code class=&quot;highlighter-rouge&quot;&gt;inspeccionar elemento&lt;/code&gt; para entender como organiza la página los capítulos en el código &lt;code class=&quot;highlighter-rouge&quot;&gt;html&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/plusdede-inicio-inspeccionar.png&quot; alt=&quot;Inspeccionando elemento&quot; title=&quot;Inspeccionando capítulos pendientes&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/plusdede-inicio-inspeccionar.PNG&quot; alt=&quot;Inspeccionando elemento&quot; title=&quot;Inspeccionando capítulos pendientes&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Definiremos un nuevo método que se encargue de leer los capítulos de la página de inicio en función de los elementos que hemos visto que 
 se encargan de mostrar los capítulos.&lt;/p&gt;
@@ -246,7 +246,7 @@ De esta manera, obtenemos los elementos específicos que hemos visto analizando 
 
 &lt;p&gt;Y esto nos devuelve:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/scraping_resultado.png&quot; alt=&quot;Resultado final&quot; title=&quot;Resultado final&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/scraping_resultado.PNG&quot; alt=&quot;Resultado final&quot; title=&quot;Resultado final&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusiones&quot;&gt;Conclusiones&lt;/h2&gt;
 

@@ -65,7 +65,7 @@ Lo siguiente será hacer nuestra primera función que se encargará de identific
 
 Si vamos a la página de identificación de [`plusdede.com/login`](https://www.plusdede.com/login) veremos una página como la siguiente:
 
-![Página de login de plusdede.com]({{"/assets/img/plusdede_login.png " | absolute_url }} "plusdede.com/login")
+![Página de login de plusdede.com]({{"https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/plusdede_login.PNG " | absolute_url }} "plusdede.com/login")
 
 Lo primero que llama nuestra atención es la presencia del *captcha* que hay que completar para poder entrar. Tendrá que haber una forma de mostrar al usuario el *captcha*
 para que este lo complete y poder identificarse correctamente.
@@ -73,7 +73,7 @@ para que este lo complete y poder identificarse correctamente.
 En este momento la herramienta de `inspeccionar elemento` de nuestro Firefox o Chrome se vuelve nuestra mejor amiga.
 Si hacemos click derecho en la imagen del *captcha* y le damos a inspeccionar elemento podremos ver en el panel derecho que se abre de qué tipo de elemento es.
 
-![Inspeccionando elemento]({{"/assets/img/plusdede_inspeccionar_elemento.png" | absolute_url }} "Inspeccionando captcha")
+![Inspeccionando elemento]({{"https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/plusdede_inspeccionar_elemento.PNG" | absolute_url }} "Inspeccionando captcha")
 
 Vemos por lo tanto que se trata de una imagen con su etiqueta `<img>`.
 
@@ -228,7 +228,7 @@ Y la añadimos a las importaciones del inicio del script `from bs4 import Beauti
 
 Una vez más, utilizaremos `inspeccionar elemento` para entender como organiza la página los capítulos en el código `html`.
 
-![Inspeccionando elemento]( {{ "/assets/img/plusdede-inicio-inspeccionar.png" | absolute_url }} "Inspeccionando capítulos pendientes")
+![Inspeccionando elemento]( {{ "https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/plusdede-inicio-inspeccionar.PNG" | absolute_url }} "Inspeccionando capítulos pendientes")
 
 Definiremos un nuevo método que se encargue de leer los capítulos de la página de inicio en función de los elementos que hemos visto que 
 se encargan de mostrar los capítulos.
@@ -268,7 +268,7 @@ navegador.quit() # Cerramos el navegador
 
 Y esto nos devuelve:
 
-![Resultado final]({{ "/assets/img/scraping_resultado.png" | absolute_url }} "Resultado final")
+![Resultado final]({{ "https://raw.githubusercontent.com/ssalvatella/ssalvatella.github.io/master/assets/img/scraping_resultado.PNG" | absolute_url }} "Resultado final")
 
 ## Conclusiones
 
